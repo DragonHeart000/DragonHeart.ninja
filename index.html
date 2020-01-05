@@ -12,14 +12,27 @@
 </script>
 
 <meta charset="utf-8">
-<title>DragonHeart.Ninja</title>
+<title>Projects</title>
 <link href="mainCSS.css" rel="stylesheet" type="text/css">
 <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="projectsjs.js"></script>
+
 </head>
 
 <body>
-<div class="banner">
+
+<div class="projectsbanner">
+
+<!--comment screw this it won't work and no one will notice it anyway
+<video autoplay loop id="projects-video-background" muted
+	height= "200px"
+	width= "1024"
+ 	z-index= "0">
+  <source src="images/projectsbanner.mp4" type="video/mp4">
+</video>
+<-->
 
 <div class="banner-links">
   <a href="https://stackoverflow.com/users/4714919/dragonheart000" target="_blank"><img src="images/so-icon.png" width="42" height="42" alt=""/></a>
@@ -29,36 +42,1072 @@
 
 <div class="navbar">
 <ul>
-	<li><a href="http://www.dragonheart.ninja">Home</a></li>
-	<li><a href="projects">Projects</a></li>
+	<li><a href="http://www.dragonheart.ninja">Projects</a></li>
 	<li><a href="social">Social</a></li>
 	<li><a href="contact">Contact</a></li>
 </ul>
 </div>
 </div>
-
-
-<handwritten id="welcome">Welcome,</handwritten>
-<br>
-<div id="aboutMe">
-<img src="images/me.jpg" alt="" width="184" height="184" id="myPicture"/>
-<p>I am Riley Shumway, an aspiring game developer. I recently graduated from West High School and am currently trying to dedicate more time to learn more about coding and to spend time working on actual projects. I took all the Computer Science classes at my school and even one at the University of Wisconsin-Madison after exhausting my schools' computer science curriculum. I am proficient in C#, Java, HTML, CSS, JavaScript, and Batch Scripting. I love programming, but I do dabble in all fields from 3D modeling all the way to Video FX. It's hard to give credit to a single event in my life that made me love coding since I have played video games my entire life. One event that I feel may have caused me to want to pursue a job in technology was in 6th grade when we made simple programs in scratch, and I enjoyed it quite a lot, so I downloaded it at home and did that for hours. After that, I continued to get more and more into computer games and just technology in general, so when I got into High School and felt I needed a job I looked for something that would teach me a lot, and that's how I ended up working at Madison Geeks doing computer repair. Although it's not directly software or game development related I still enjoy working there quite a bit and have learned a lot about technology in the years I have been there. It's still very early in my career so I am trying to use this time to learn as much as I can about coding and make the best of what I have. I love to learn about coding and technology, and I know I have just barely scratched the surface of my potential.</p>
+<div class="sidebarshown" id="sidebar">
+	<button id="showhidenav" type="button" onclick="showhidesidebar();"><arrow class="left" id="arrowtoturn"></arrow></button>
+	<div class="sidebaritem" id="sidebaritem-1">
+		<h3>Filter Out</h3>
+		<ul class="sidebar-list">
+			<li><input type="checkbox" id="filteroutgames" onchange="filter();">Games</li>
+			<li><input type="checkbox" id="filteroutsoftware" onchange="filter();">Software</li>
+			<li><input type="checkbox" id="filteroutwebsites" onchange="filter();">Websites</li>
+			<li><input type="checkbox" id="filteroutvideos" onchange="filter();">Videos</li>
+			<li><input type="checkbox" id="filteroutGameMod" onchange="filter();">Game Mods</li>
+			<!--Comment><li><input type="checkbox" id="filteroutosu" onchange="filter();">Osu!</li><-->
+		</ul>
+	</div>
+	
+	<div class="sidebaritem" id="sidebaritem-2">
+		<h3>Show only</h3>
+		<!--Comment>Yes I can do this with radio boxes, no I won't<-->
+		<ul class="sidebar-list">
+			<li><input type="checkbox" class="showonly" id="showall" onchange="showprep()">All</li>
+			<li><input type="checkbox" class="showonly" id="showgames" onchange="showprep()">Games</li>
+			<li><input type="checkbox" class="showonly" id="showsoftware" onchange="showprep()">Software</li>
+			<li><input type="checkbox" class="showonly" id="showwebsites" onchange="showprep()">Websites</li>
+			<li><input type="checkbox" class="showonly" id="showwebvideos" onchange="showprep()">Videos</li>
+			<li><input type="checkbox" class="showonly" id="showGameMod" onchange="showprep()">Game Mods</li>
+			<!--Comment><li><input type="checkbox" class="showonly" id="showosu" onchange="showprep()">Osu!</li><-->
+		</ul>
+	</div>
 </div>
+<div class="wrapperforwhensidebarisused" id="wrapper">
 <br>
-<div class="buttonsDiv">
 
-<a href="https://discord.gg/YT9vqkq" target="_blank" class="button">See what I am working on now!</a>
+<handwritten>Showing: <span id="showingType">none</span></handwritten>
+<divline></divline>
 
-<br><br><br>
-<a href="projects" class="button">Check out my projects!</a>
-<br><br><br>
-<a href="contact" class="button">Contact</a>
+<div class="gameMod">
+	<br>
+	<div float="projects-text">
+		<h1>TTT_Archive-Pavlov</h1>
+		<div class="projects-image">
+			<div id="TTT_Archive-Pavlov-Slideshow" class="slideshow">
+   				<div>
+     				<img width="560" height="315" src="images/TTT_Archive-pavlov/v1.0ae.JPG">
+   				</div>
+				<div>
+     				<img width="560" height="315" src="images/TTT_Archive-pavlov/v1.0be.JPG">
+   				</div>
+				<div>
+     				<img width="560" height="315" src="images/TTT_Archive-pavlov/v1.0ce.JPG">
+   				</div>
+				<div>
+     				<img width="560" height="315" src="images/TTT_Archive-pavlov/v1.0de.JPG">
+   				</div>
+				<div>
+     				<img width="560" height="315" src="images/TTT_Archive-pavlov/v1.0ee.JPG">
+   				</div>
+				<div>
+     				<img width="560" height="315" src="images/TTT_Archive-pavlov/v1.0fe.JPG">
+   				</div>
+				<div>
+     				<img width="560" height="315" src="images/TTT_Archive-pavlov/v1.0ge.JPG">
+   				</div>
+				<div>
+     				<img width="560" height="315" src="images/TTT_Archive-pavlov/v1.0he.JPG">
+   				</div>
+				<div>
+     				<img width="560" height="315" src="images/TTT_Archive-pavlov/v1.0ie.JPG">
+   				</div>
+				<div>
+     				<img width="560" height="315" src="images/TTT_Archive-pavlov/v1.0je.JPG">
+   				</div>
+				<div>
+     				<img width="560" height="315" src="images/TTT_Archive-pavlov/v1.0ke.JPG">
+   				</div>
+				<div>
+     				<img width="560" height="315" src="images/TTT_Archive-pavlov/v1.0le.JPG">
+   				</div>
+			</div>
+		</div>
+		<p>TTT_Archive-Pavlov is a map for the game Pavlov VR for the TTT mod in the game. The map is still very early in development and will receive regular updates until it reaches a satisfactory point. Currently, I am working on both this and CGCG. I was going to plan for making this after polishing up 4-shadowed and finishing CGCG, however, I was incentivized to do this sooner, however, CGCG is still being worked on.</p>
+		<p>I mostly took on this project as an excuse to learn more about Unreal Engine 4 as I had experience with it before, however, never got very in-depth with it. Working on this project has gotten me quite a bit more familiar and comfortable with UE4, however, I still feel I have more to learn about this and plan to take on more projects in UE4 in the future.</p>
+		<span class="projects-startdate">Started: August 17th, 2019</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+		</div>
+	<div class="projects-links">
+		<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1840815350" class="button" target="_blank">Check it out!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
 </div>
-<br><br><br>
 
+<div class="game">
+	<br>
+	<div class="projects-text">
+		<h1>4-Shadowed</h1>
+		<div class="projects-image">
+			<div id="4-Shadowed-Slideshow" class="slideshow">
+   				<div>
+     				<img width="560" height="315" src="images/4-Shadowed/1.png">
+   				</div>
+				<div>
+     				<img width="560" height="315" src="images/4-Shadowed/2.png">
+   				</div>
+				<div>
+     				<img width="560" height="315" src="images/4-Shadowed/3.png">
+   				</div>
+				<div>
+     				<img width="560" height="315" src="images/4-Shadowed/4.png">
+   				</div>
+			</div>
+		</div>
+		<p>4-Shadowed was made for the <a href="https://itch.io/jam/gmtk-2019">GMTK 2019 Game Jam</a>, a 48 hour jam. The theme was "Only one" meaning that you need to take something the player is used to having many of (such as bullets or jumps) and give them only one then design around it. In my game, I had two things that I did with the theme. First I gave the player only one inventory slot, this causes the player to make hard choices such as giving up a high attack item for a high armor one. The second thing I had for the theme was making the game a split-screen game with only one player so when you'd move one character they all would move. Originally I wanted to do more with this by adding puzzle aspects that toy with this idea, however, with the 2 days given to make the game I didn't get around to adding this. I do plan to polish up the game and release it as a full title and things such as this will be added.</a></p>
+		<p>From this project, I learned a fair bit. I think the most useful thing that I learned from it though was A* pathfinding. I had an understanding of how it worked but never had done anything with it before in a project and therefore never applied the knowledge I had on the subject to an actual usage. Now for this project, I had used a Unity asset to do the hard part of the pathfinding for me but that gave me the opportunity to learn more about it. This is something I will certainly use in the future now that I have this understanding and I may try doing the hard part that the asset did for me myself as it is certainly something I am capable of doing, just not in a 48-hour jam.</p>
+		<span class="projects-startdate">Started: August 2nd, 2019</span>
+		<br>
+		<span class="projects-teamsize">Team size: solo</span>
+	</div>
+	<div class="projects-links">
+		<iframe frameborder="0" src="https://itch.io/embed/462213?linkback=true&amp;bg_color=3c2d16&amp;fg_color=ffffff&amp;link_color=2eff07&amp;border_color=63543f" width="552" height="167"></iframe>
+	</div>	
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<div class="game">
+	<br>
+	<div class="projects-text">
+		<h1>CGCG</h1>
+		<div class="projects-image">
+			<div id="CGCG-Slideshow" class="slideshow">
+   				<div>
+     				<img width="560" height="315" src="images/cgcg/cgcgfirstpublicimage.png">
+   				</div>
+			</div>
+		</div>
+		<p>CGCG is the videogame adaptation of the card game with the same name invented by my friend Kevin Tan. Him, some of his friends, and I worked on the card game version in High School and once it got to a fairly good point with over a year of balancing I started on the video game version shown here. This is still an ongoing project that I intend to finish and release. The game is played with 2 to 5 people (no single player planned). More info on this game will be released as it approaches release. To get the updates right away you can join the <a href="https://discord.gg/YT9vqkq" target="_blank">Discord server</a> for it! (will be setting up an Email newsletter once further into development)</p>
+		<p>So far work on this game has taught me a lot but I am sure there will be exceedingly more taught to me with this project by the time it's published. Having started programming with an already well-established idea both makes the creation process so much easier and so much harder. You're able to just get to work on things and jump to it but at the same time, you come across things that worked well in real life but not so much in a game. Then you have to figure out what to do in these situations and no situation is the same. They all require a different approach. On top of that, despite having done multiplayer before on both projects mentioned here and concepts that never made it far enough to be posted here this one seemed different. Whether that be from me switching to trying out Photon or the whole experience being quite different than ones I have done before it was harder.</p>
+		<span class="projects-startdate">Started: June 3rd, 2019</span>
+		<br>
+		<span class="projects-teamsize">Team size (VideoGame version): Solo</span>
+		<br>
+		<span class="projects-teamsize">Team size (Cardgame version): 3</span>
+	</div>
+	<div class="projects-links">
+		<iframe src="https://ptb.discordapp.com/widget?id=592920522384474112&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+		<br><br>
+		<a href="https://discord.gg/YT9vqkq" class="button" target="_blank">Join Discord!</a>
+	</div>	
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<div class="game">
+	<br>
+	<div class="projects-text">
+		<h1>Desktop in Unity</h1>
+		<div class="projects-image">
+			<div id="DesktopInUnity-Slideshow" class="slideshow">
+   				<div>
+     				<img width="560" height="315" src="images/Desktop in Unity/1.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/Desktop in Unity/2.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/Desktop in Unity/3.jpg">
+   				</div>
+			</div>
+		</div>
+		<p>This project started as a game where you would hack other people in this desktop environment MMO. Eventually, I left the team I was with for many reasons and because I was the head dev, and the only one that knew how to use Unity or even C# I was able to keep the project as my own. I have not touched it since leaving but should I pick this up as a solo project I have the beginnings to a desktop environment and would be able to make some interesting things.</p>
+		<p>This project still did teach me a lot. I was the lead dev so I got to practice managing a team. I got to put some of the team organization methods I learned from working with the Atmora team such as having everyone use Trello for better communication. I also learned to respect my own work more and to make sure a team I am working with is able to create what they envision.</p>
+		<span class="projects-startdate">Started: December 25th, 2018</span>
+		<br>
+		<span class="projects-teamsize">Team size: 6</span>
+	</div>
+	<div class="projects-links">
+		<a href="https://github.com/DragonHeart000/Desktop-in-Unity" class="button" target="_blank">Check it out!</a>
+	</div>	
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<div class="game">
+	<br>
+	<div class="projects-text">
+		<h1>VR Game Demo #1</h1>
+		<div class="projects-image">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/M77fY-Yl5Yo?controls=0&autoplay=1&loop=1&playlist=M77fY-Yl5Yo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<p>VR Game Demo #1 (real name still pending) is a VR game for the oculus rift that I made in a two week time constraint. The game was meant to be a demo to display a concept and get feed back on said concept to see if it should be taken further. After the two weeks of development I uploaded it to itch.io to start getting feedback. The project is curently on hold whilst I get people to play it but will be picked back up afterward as there is still plenty to do.</p>
+		<p>This project in particular was quite a learning experience. Having the game be a VR title made it so many game design choices I am used to were not at my disposal, for example, how would one make it so a player can only swing their sword a certain amount of times in a given period? The simple solution would be to lock them in an animation and don't allow another attack till after it has played, but how can you do that in VR where the player has full control over every action they do? Many things like this came up whilst working on the project and they really challenged me to come up with interesting solutions. Also, for anyone who is curious, with that example I gave what I ended up doing is increasing damage done based on how much motion and speed was put into an attack forcing the player to almost play out those animations in real life.</p>
+		<span class="projects-startdate">Started: December 5th, 2018</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+	</div>
+	<div class="projects-links">
+		<iframe frameborder="0" src="https://itch.io/embed/348309?linkback=true&amp;border_width=2&amp;bg_color=5d0097&amp;fg_color=ffffff&amp;link_color=4CAF50&amp;border_color=000000" width="554" height="169"></iframe>
+	</div>	
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<div class="gameMod">
+	<br>
+	<div float="projects-text">
+		<h1>Beyond Skyrim: Expedition to Atmora
+</h1>
+		<div class="projects-image">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/Yk0surHJ6Jw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		<p>Beyond Skyrim: Expedition to Atmora is a mod for the game The Elder Scrolls V: Skyrim that allows you to visit Atmora north of Skyrim. The goal of all the Beyond Skyrim teams are to bring some of the rest of Nirn (the plant of which Skyrim is located on) into the game. There are multiple teams each working on a different place in nirn and I joined the one for Atmora. I do implementation on the team which involves taking what the writers have made and making it a reality in the mod.</p>
+		<p>This was my first project in a REALLY large team and from that, I learned a lot about the workflow in a larger environment. These things range from organizational procedures, to how to work with multiple others on the same thing within a project. Some of the things I learned I have since started using for even my solo projects, such as using sites like Trello to keep a good idea of what needs to be done, what is most important, what ideas may I consider adding, and what is broken that I need to look into.</p>
+		<span class="projects-startdate">Joind: October 1st, 2018</span>
+		<br>
+		<span class="projects-teamsize">Team size: 84</span>
+		<br>
+		<span class="projects-role">Role: Implementation (papyrus scripting)</span>
+		</div>
+	<div class="projects-links">
+		<a href="https://beyondskyrim.org/projects/atmora/" class="button" target="_blank">Check it out!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<div class="game">
+	<br>
+	<div class="projects-text">
+		<h1>Apostasy</h1>
+		<div class="projects-image">
+			<div id="Apostasy-Slideshow" class="slideshow">
+   				<div>
+     				<img width="560" height="315" src="images/Apostasy/1.png">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/Apostasy/2.png">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/Apostasy/3.png">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/Apostasy/4.png">
+   				</div>
+			</div>
+		</div>
+		<p>Apostasy was a game I made for the <a href="https://itch.io/jam/gmtk-2018">GMTK 2018 Game Jam.</a> The jam took place during the first two days of september and people had to make a game in 48 hours that fit the theme "genre without mechanic". Meaning you had to pick a genre and remove one of it's core mechanics (learn more <a href="https://www.youtube.com/watch?v=_-bA1ZQWhUU&ab_channel=MarkBrown">here</a>). Apostasy was an adventure rpg where you don't level up, instead you level down. By inverting this basic mechanic players have to carfuly think about their play style and how they can beat the game even without stuff they normally rely on. It also makes the game a puzzle at parts where the player needs to decide what they don't need to beat an upcoming obsitcal.</p>
+		<p>From this game, I took away two really important things. First off, I had made this game entirely in Java just using JavaFX which made it far harder to do than it should have been. This really taught me the importance of picking the right tool for the job, although I love making everything from scratch it's important to use what I have at my disposal and not to reinvent the wheel. Having learned that I decided I will be using a real game engine for future projects that are like this. The second thing I took away from this is a much stronger belief in myself. I made a game in 48 hours! And it wasn't garbage either! If I can do that then what else can I do if I really put my mind to it and set aside time for it as I did with this.</p>
+		<span class="projects-startdate">Started: September 1st, 2018</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+	</div>
+	<div class="projects-links">
+		<a href="https://itch.io/jam/gmtk-2018/rate/299917" class="button" target="_blank">Check it out!</a>
+	</div>	
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+
+<div class="software">
+	<br>
+	<div class="projects-text" id="Twitch Chat HotKeys">
+		<h1>Twitch Chat HotKeys</h1>
+		<div class="projects-image">
+			<div id="Twitch_Chat_HotKeys-slideshow" class="slideshow">
+   				<div>
+     				<img width="560" height="315" src="https://raw.githubusercontent.com/DragonHeart000/TwitchChatHotKeys/master/Screenshots/sctl.png">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="https://raw.githubusercontent.com/DragonHeart000/TwitchChatHotKeys/master/Screenshots/sctm.png">
+   				</div>
+			</div>
+		</div>
+		<p>
+			TwitchChatHotKeys is a program that allows Twitch Streamers to bind any key on their keybaord to say anything in twitch chat. Most common uses would be for running a commercial, moderating chat with timeouts/bans, or putting chat in followers/subscribers only mode, but anything can be done with it. I started the program to help with doing a giveaway on my twitch stream. I was just alt tabbing to type in chat "/followers 0" to make sure only followers could enter the giveaway but then one day this caused my game to crash and make me lose a lot of progress. To solve this issue I created a very early alpha version in just two days and used it for the rest of the giveaway. Since then there was a small break but now the program gets daily updates.
+		</p>
+		<span class="projects-startdate">Started: July 27th, 2018</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+	</div>
+	<div class="projects-links">
+		<a href="http://www.thk.chat" class="button" target="_blank">Check it out!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<!--Comment>
+<div class="webVideo">
+	<br>
+	<div float="projects-text">
+		<h1>Music Video 17: Hold On by Prismo</h1>
+		<div class="projects-image">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/6nGGP2a2CF4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		<p>This music video is easily the one I have spent the most time on so far with at least 30 hours of work I crammed in to meet my 1 week deadline of having this ready for Valentine's day. I would certainly say the amount of time I put into it was well worth it as it turned out fairly well and I had put extensive thought into everything. Everything in the video is placed very carefully as to have a deeper meaning. The colours start out with a slight blue tint to represent sadness, the colour then changes to yellow as the tempo picks up to represent change, and finally it is white when the song drops to represent clear thinking and a happier time. This same effect is also done through the text, for the first part all text is 2D, then there is a mixture of 2D and 3D when picking up, and finally during the drop everything is 3D and the font colour changes to red, both these changes represent more alive, active, and free feelings as it's being freed into the third dimension. There is also a constent trend of things that would be related to the person singing the song comes in from the right and the person being sung to from the left, then any other types of things from top and bottum. Feel free to ask me more about the deeper meaning of some of the things as there is still a lot more to it. The music featured was provided by No Copy Right sounds and the song can be found <a href="https://www.youtube.com/watch?v=A7E-jPMolJ0" target="_blank">here!</a></p>
+		<span class="projects-startdate">Uploaded: February 14th, 2018</span>
+	</div>
+	<div class="projects-links">
+		<a href="https://www.youtube.com/watch?v=auGMScIrQRc&list=PLUAQs3KTZQLnaY7lkDVTjJFYaWzkt-3MG" class="button" target="_blank">Check out the playlist!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+	
+</div>
+<-->
+
+<div class="software">
+	<br>
+	<div class="projects-text">
+		<h1>Immerse Creator</h1>
+		<div class="projects-image">
+			<div id="Immerse_Creator-slideshow" class="slideshow">
+   				<div>
+     				<img width="560" height="315" src="images/Immerse Creator/0.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/Immerse Creator/1.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/Immerse Creator/2.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/Immerse Creator/3.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/Immerse Creator/4.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/Immerse Creator/5.jpg">
+   				</div>
+			</div>
+		</div>
+		<p>In November of 2017, I started as an Independent Contractor at Arch Virtual which creates non-game virtual reality applications for business and enterprise visualization and simulation. I was assigned to the Immerse Creator project and mostly have mostly just been doing asset importing. Immerse Creator, as it is described on steam, "is a collaborative VR environment where you can create 3D models, architectural spaces, free-form sketches, leave notes, and access a library of high quality assets." The last part about assets is what I have worked on. Immerse creator has since pivoted into Acadicus Medical which I still do contracting work for to this day.
+		</p>
+		<p>
+			Doing work for Arch Virtual was my first real entry point into game development as an actual career, before this it was exclusively something I did as a hobby with the intention of moving onto something more real. Being in a real place helped me take away a lot about what it's like working for a company doing game development even though I was just an independent contractor. Being at Arch Virtual also helped me get experience with Unity and c# which I use often now and am glad about it.
+		</p>
+		<span class="projects-startdate">Started: November 27th, 2017</span>
+		<br>
+		<span class="projects-teamsize">Team size: 20</span>
+	</div>
+	<div class="projects-links">
+		<a href="http://store.steampowered.com/app/412640/Immerse_Creator/" class="button" target="_blank">Check it out!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<div class="software">
+	<br>
+	<div class="projects-text" id="osuBot3">
+		<h1>Osu!Bot 3.0 Beta</h1>
+		<div class="projects-image">
+			<img src="images/osuBotScreenShot.JPG" width="560" height="315"/>
+		</div>
+		<p>
+			Osu!Bot 3.0 is a client sided irc chat bot made to help streamers manage song requests going on in twitch chat from osu chat! Osu!Bot will listen to twitch chat for any song requests, or other commands that are supported, from non banned users and add them to a queue. Upon seeing an admin request the next song in twitch chat or the user ask for the next song in game chat Osu!Bot will provide the next song that was queued in both Twitch and Game chat.
+			<br>
+			Osu!Bot 3.0 Beta is a continued project from the original Osu!Bot which you can learn more about <a href="#osuBot1">here!</a>
+			<br>
+			The project is currently on hold to prioritize other projects but may be picked back up at a later date.
+		</p>
+		<span class="projects-startdate">Started: November 3rd, 2017</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+	</div>
+	<div class="projects-links">
+		<a href="https://github.com/DragonHeart000/OsuBot" class="button" target="_blank">Check it out!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<div class="website">
+	<br>
+	<div class="projects-text">
+		<h1>This Site!</h1>
+		<div class="projects-image">
+			<img src="Logo/Dh Logo.svg" width="184" height="184" id="dhlogo"/>
+		</div>
+		<p>This version of this site is my most recent project, starting on October 20th, 2017 I began work on this version of the site in DreamWeaver. There were two main reasons for it, firstly I needed a portfolio site anyway but secondly I wanted to have something to show people I may meet at <a href="http://www.mdevconf.com/" target="_blank">M+dev</a> happening in one week from the time I started on it.</p>
+		<span class="projects-startdate">Started: October 20th, 2017</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+	</div>
+	<div class="projects-links">
+		<span class="button-greyedout">Check it out!</span>
+		<br><br>
+		(You're already here)
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<div class="website">
+	<br>
+	<div class="projects-text">
+		<h1>CryptoAssists.com</h1>
+		<div class="projects-image">
+			<img src="images/cryptoassistslogo.svg" width="560" height="315" alt=""/>
+		</div>
+		<p>A website I have been making by myself in order to provide tools to help anyone, experienced or not, with the use of crypto currencies. The tools are currently very primitive and there are not many, however, there are plans to add things such as an RSS reader for the news tool and even a JS miner made from scratch along with a nice web interface to go with it.</p>
+		<p>This website has since been shut down but you can still download the files from it's last state to see what it was like!</p>
+		<span class="projects-startdate">Started: August 13th, 2017</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+		</div>
+	<div class="projects-links">
+		<a href="CryptoAssistsArchive.zip" class="button" target="_blank">Download Archive</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<div class="game">
+	<br>
+	<div class="projects-text">
+		<h1>Not an RPG</h1>
+		<div class="projects-image">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/qLiTMjVuE60?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<p>Not an RPG is a text-based RPG made in Java that I was the lead developer for. The game has since been cancelled as everyone else either lost interest, didn't have time, or went onto college as they were a senior when working on it. The game is a copy of a game I made with just batch and vbs files back when I was 15 but upgraded to have a more developed story, better visuals, and more functions. Sadly the game is not yet done and is not planned to be finished, however, I still do have all the files and perhaps it will be worked on more at some point. For that reason, I have not yet released a build for it publicly.</p>
+		<span class="projects-startdate">Started: April 26th, 2017</span>
+		<br>
+		<span class="projects-teamsize">Team size: 3</span>
+	</div>
+	<div class="projects-links">
+		<a href="http://steamcommunity.com/sharedfiles/filedetails/?id=906496379" class="button" target="_blank">Check it out!</a>
+	</div>	
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<div class="gameMod">
+	<br>
+	<div float="projects-text">
+		<h1>Surf_Glitch</h1>
+		<div class="projects-image">
+			<div id="surf_onionmap-slideshow" class="slideshow">
+   				<div>
+     				<img width="560" height="315" src="images/surf_onionmap/1.JPG">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/surf_onionmap/2.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/surf_onionmap/3.jpg">
+  			 	</div>
+  			 	<div>
+     				<img width="560" height="315" src="images/surf_onionmap/4.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/surf_onionmap/5.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/surf_onionmap/6.jpg">
+  			 	</div>
+  			 	<div>
+     				<img width="560" height="315" src="images/surf_onionmap/7.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/surf_onionmap/8.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/surf_onionmap/9.jpg">
+  			 	</div>
+  			 	<div>
+     				<img width="560" height="315" src="images/surf_onionmap/10.JPG">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/surf_onionmap/11.JPG">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/surf_onionmap/12.JPG">
+  			 	</div>
+  			 	<div>
+     				<img width="560" height="315" src="images/surf_onionmap/13.JPG">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/surf_onionmap/14.JPG">
+   				</div>
+			</div>
+		</div>
+		<p>Surf_Glitch is my second attempt at a surf map for cs:go after surf_potato. Originally the map was named Surf_OnionMap but when released was renamed to Surf_Glitch as the map features quite a few random and unexpected twists as to make it seem like it has "glitched out". Some included ones are teleporting to a new area whilst there is still more in that area, being flung down a distorted version de_dust2 A Long to act as though the wrong map has loaded, and many other surprises that you may pick up on from the screenshots. The map was put to a hault for a long time but recently has been finished up and released.</p>
+		<span class="projects-startdate">Started: June 9th, 2017</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+		</div>
+	<div class="projects-links">
+		<a href="http://steamcommunity.com/sharedfiles/filedetails/?id=1297816008" class="button" target="_blank">Check it out!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+
+<div class="game">
+	<br>
+	<div class="projects-text">
+		<h1>Cave Explorer 2.0</h1>
+		<div class="projects-image">
+			<img src="images/cave-explorer.JPG" width="560" height="315"/>
+		</div>
+		<p>Cave explorer is a simple text based RPG in Java that I made as an AP Comp Sci end of the year final for my sophmore year of highschool. The game is extreamly simple but is a fun little rng based game to mess around with for a little bit. There's not any plan to update it unless it gets some interest by people. If I were to make 3.0 version it would likely be a full remake and I would keep hardly, if any, of the code already there.</p>
+		<span class="projects-startdate">Started: June 6th, 2017</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+	</div>
+	<div class="projects-links">
+		<a href="Cave Explorer.zip" class="button" target="_blank">Download it!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<div class="software">
+	<br>
+	<div class="projects-text" id="osuBot1">
+		<h1>Osu!Bot</h1>
+		<div class="projects-image">
+			<img src="images/osubot.JPG" width="560" height="315"/>
+		</div>
+		<p>Osu!Bot is an irc bot I made in Java to help manage song requests on Twitch.tv whilst playing Osu! The main function is to just take anything it recognizes as a song request (!sr or !songrequest) and add the following url, if valid, to a queue. The task started out simple but as time went on I give the Osu!Bot more of a personality by allowing it to respond to other commands that were there purely for entertainment and even some things it picked up as talking at it despite it not being a command. As things went on with the project I introduced a total of two new bots, AssistanceBot and TotallyAverageVeiwer. AssistanceBot was made just for that, helping out with basic tasks for any stream, not just osu streams. Assistance handled basic things like faq, greeting doners/mods, tracking user retention and activity (to later use in crunching data to find best time, game, and even people to stream for in order to get the best out of a stream). TotallyAverageVeiwer was a bot made to driver veiwer engagment by doing simple stuff like saying something when chat is quite but people are on, joining in on spam (such as if everyone is saying pjsalt it will too), and chatting back with other users. Since the program is made custom for my audience and includes oAuth keys I have not yet released a public build but I do plan on possibly making it more dynamic so anyone can use it.
+		</p>
+		<a href="https://www.youtube.com/watch?v=MQZPZ7u0qYk&amp;index=41&amp;list=PLUAQs3KTZQLnrS2ksBO22KaO3oUFR3EIp" target="_blank">If you'd like to check out the first public display of the Osu!Bot click here.</a><br>
+        <span class="projects-startdate">Started: December 15th, 2016</span>
+        <br>
+		<span class="projects-teamsize">Team size: Solo</span>
+		</div>
+	<div class="projects-links">
+		<span class="button-greyedout" target="_blank">Check it out!</span>
+		<br><br>
+		(No public release of this version but 3.0 is on GitHub)
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+
+<div class="gameMod">
+	<br>
+	<div float="projects-text">
+		<h1>de_Convenience</h1>
+		<div class="projects-image">
+			<!--Comment>
+			<iframe width="50%" height="50%" src="https://sketchfab.com/models/aabdbd2ffe5e45a1a75c4cd25a00a533/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+			<-->
+			<div id="de_Convenience-slideshow" class="slideshow">
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/1.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/2.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/3.jpg">
+  			 	</div>
+  			 	<div>
+     				<img width="560" height="315" src="images/de_convenience/4.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/5.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/6.jpg">
+  			 	</div>
+  			 	<div>
+     				<img width="560" height="315" src="images/de_convenience/7.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/8.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/9.jpg">
+  			 	</div>
+  			 	<div>
+     				<img width="560" height="315" src="images/de_convenience/10.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/11.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/12.jpg">
+  			 	</div>
+  			 	<div>
+     				<img width="560" height="315" src="images/de_convenience/13.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/14.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/15.jpg">
+  			 	</div>
+  			 	<div>
+     				<img width="560" height="315" src="images/de_convenience/16.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/17.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/18.jpg">
+  			 	</div>
+  			 	<div>
+     				<img width="560" height="315" src="images/de_convenience/19.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/20.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/21.jpg">
+  			 	</div>
+  			 	<div>
+     				<img width="560" height="315" src="images/de_convenience/22.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/23.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/24.jpg">
+  			 	</div>
+  			 		<div>
+     				<img width="560" height="315" src="images/de_convenience/25.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/26.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/27.jpg">
+  			 	</div>
+  			 	<div>
+     				<img width="560" height="315" src="images/de_convenience/28.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/29.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_convenience/30.jpg">
+  			 	</div>
+			</div>
+			<!--Comment>
+			<button type="button">More info!</button>
+			<-->
+		</div>
+		<p>de_Convenience is a full 5v5 defuse map made for the game Counter-Strike: Global Offensive. The map features an abnormal layout favouring height instead of spreading out horizontally. The map is a remake of my first ever map 2v2_convenience and just builds upon it, adds a lot of new areas, makes it compatible for competitive, and enhances visuals and layout. Out of all the maps I have made I feel this one is the best gameplay wise, I have certainly made more visually stunning maps but none played quite as well as this one did. Also, do note that in the screenshots I had done the wrong command so none of the doors or breakable props are rendered.</p>
+		<span class="projects-startdate">Started: July 8th, 2016</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+		</div>
+	<div class="projects-links">
+		<a href="http://steamcommunity.com/sharedfiles/filedetails/?id=720632879" class="button" target="_blank">Check it out!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<div class="gameMod">
+	<br>
+	<div float="projects-text">
+		<h1>de_Fusion</h1>
+		<div class="projects-image">
+			<div id="de_Fusion-slideshow" class="slideshow">
+   				<div>
+     				<img width="560" height="315" src="images/de_fusion/1.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_fusion/2.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_fusion/3.jpg">
+  			 	</div>
+  			 	<div>
+     				<img width="560" height="315" src="images/de_fusion/4.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/de_fusion/5.jpg">
+   				</div>
+			</div>
+		</div>
+		<p>de_Fusion is a CS:GO 5v5 defuse map made to take part mostly inside and share common traits with de_convenience, even though it came first, with having the sites on top of each other. This one however spread out the map more and attempted to have a more standard layout of three paths but in this case two went to B and the middle one went to A. Because of all the layouts that I tried putting inside of this map it ended up being extraordinarily large which made filling it a difficult task. As such you can see there are large open areas that make the gameplay boring and just an aim duel rather than strategic. Instead of reworking the layout the whole map was scratched and will remain as a friends only project on steam. Although the map may have been a failure I was able to learn more about what works and what does not for a layout from this.</p>
+		<span class="projects-startdate">Started: April 18th, 2016</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+		</div>
+	<div class="projects-links">
+		<a href="http://steamcommunity.com/sharedfiles/filedetails/?id=668081983" class="button" target="_blank">Check it out!</a>
+		<br><br>
+		(Friends Only)
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<div class="gameMod">
+	<br>
+	<div float="projects-text">
+		<h1>Surf_Potato</h1>
+		<div class="projects-image">
+			<div id="surf_potato-slideshow" class="slideshow">
+   				<div>
+     				<img width="560" height="315" src="images/surf_potato/1.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/surf_potato/2.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/surf_potato/3.jpg">
+  			 	</div>
+  			 	<div>
+     				<img width="560" height="315" src="images/surf_potato/4.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/surf_potato/5.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/surf_potato/6.jpg">
+   				</div>
+			</div>
+		</div>
+		<p>Surf_potato is my first actual attempt at a surf map in cs:go if you do not include surf_1v1 which is what made me want to make a real surf map. Surf_Potato is very incomplete and only has 3 stages. There is still value to be found from the stages, especially stage 3, but once again this map may not have been the best but I was able to pick up skills I used in later map development, however, these skills were a bit more specific to cs:go and not just general map creation.</p>
+		<span class="projects-startdate">Started: March 24th, 2016</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+		</div>
+	<div class="projects-links">
+		<a href="http://steamcommunity.com/sharedfiles/filedetails/?id=651530132" class="button" target="_blank">Check it out!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<div class="gameMod">
+	<br>
+	<div float="projects-text">
+		<h1>Surf_1v1</h1>
+		<div class="projects-image">
+			<div id="surf_1v1-slideshow" class="slideshow">
+   				<div>
+     				<img width="560" height="315" src="images/surf_1v1/1.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/surf_1v1/2.jpg">
+   				</div>
+			</div>
+		</div>
+		<p>Surf_1v1 was a 1v1 map made for cs:go where the twist was that you could surf around making it faster paced and harder to hit people. This map was actually made in just a few hours as I was only making it to record the making process for background footage of a YouTube video. Ironically though this is my most successful map with over 1,000 current subscribers. This map was also supposed to be friends only but when uploading it I accidentally made it public so I left it that way. Although the map really did not mean anything to me at the time it is what made me want to make a real surf map (surf_potato) which in turn made me make an even better surf map.</p>
+		<span class="projects-startdate">Started: March 22nd, 2016</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+		</div>
+	<div class="projects-links">
+		<a href="http://steamcommunity.com/sharedfiles/filedetails/?id=651530132" class="button" target="_blank">Check it out!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<div class="game">
+	<br>
+	<div float="projects-text">
+		<h1>Unity MultiPlayer FPS Game</h1>
+		<div class="projects-image">
+			<img src="images/UnityFPS2016.jpg" width="560" height="500"/>
+		</div>
+		<p>This was a game I had worked on in Unity a while back, I have since lost all the files associated with it and only just recently was able to dig up this photo I had taken to share with a friend on facebook. The game was very primitive as I focused mostly on getting something actually running that you could walk around in and then on getting a multiplayer system working. There was no shooting added yet and only had place holders for all models. You were able to actually get in game with another player (only via LAN) and walk around the level with them. This project was very short lived as I had only spent anywhere between a day to a week on it before reformatting my hard drive and never having backed up the files.</p>
+		<span class="projects-startdate">Started: January 24th, 2016</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+		</div>
+	<br>
+	<br>
+	<div class="projects-links">
+		<span class="button-greyedout">Check it out!</span>
+		<br>
+		<br>
+		(Lost forever...)
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<div class="gameMod">
+	<br>
+	<div float="projects-text">
+		<h1>Listen</h1>
+		<div class="projects-image">
+			<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/n3Rflt26E0A?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<p>Listen is my first cs:go sticker for a gun. The one in the video is the holo version but there was also the default version. The sticker was made in Adobe Photoshop and VTF Edit. Looking back the sticker is not very good and I know I could certainly do better as I have learned a lot more about Photoshop and Illustrator. The sticker was supposed to be a joke about asking your team to be quite so you can <b>LISTEN</b> for footsteps whilst clutching.</p>
+		<span class="projects-startdate">Started: December 13th, 2015</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+		</div>
+	<div class="projects-links">
+		<a href="http://steamcommunity.com/sharedfiles/filedetails/?id=575298692" class="button" target="_blank">Check it out!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<div class="gameMod">
+	<br>
+	<div class="projects-text">
+		<h1>Aim_Long</h1>
+		<div class="projects-image">
+			<img src="images/aim_long.jpg" width="560" height="315"/>
+		</div>
+		<p>Aim_Long is a cs:go aim map where you would practice your aim at different distances with different guns. This was one of my earliest maps and was not the most functional; I made it mostly to fiqure out more about the mechanics you could do with the source engine. As I never felt good about the functinality of the map I never took many screenshots beyond the one shown here. There were some custom textures used but they were mostly for putting instructions on how to set the settings inside the map.</p>
+		<span class="projects-startdate">Started: November 1st, 2015</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+		</div>
+	<div class="projects-links">
+		<a href="http://steamcommunity.com/sharedfiles/filedetails/?id=545844094" class="button" target="_blank">Check it out!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<div class="gameMod">
+	<br>
+	<div class="projects-text">
+		<h1>6v6_Elevator_Shaft</h1>
+		<div class="projects-image">
+			<img src="images/6v6_Elevator_Shaft.jpg" width="560" height="315"/>
+		</div>
+		<p>6v6_Elevator_Shaft was my first cs:go map that I put moving components into and custom textures. It was also the second map for cs:go that I ever worked on. The idea of the map was to have a chaotic FFA mess with moving components to always keep players on their toes. There was to be air ducts that could be controlled by other players to rearrange them into a maze. As it stands now it is not good for 6v6 as originally intended since there is not much room, however, I still have had some fun on it just in 1v1s or 1v1v1s. For this map, I really was just trying a lot of new stuff to see what I could do and what I can't. I was still learning a lot about the editor and how to make game modes or maps. I still feel this map could have potential if reworked into something a bit more functional with more space and objects.</p>
+		<span class="projects-startdate">Started: October 24th, 2015</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+		</div>
+	<div class="projects-links">
+		<a href="http://steamcommunity.com/sharedfiles/filedetails/?id=541036427" class="button" target="_blank">Check it out!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+<div class="gameMod">
+	<br>
+	<div float="projects-text">
+		<h1>2v2_Convenience_Store</h1>
+		<div class="projects-image">
+			<div id="2v2_Convenience_Store-slideshow" class="slideshow">
+   				<div>
+     				<img width="560" height="315" src="images/2v2_Convenience_Store/1.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/2v2_Convenience_Store/2.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/2v2_Convenience_Store/3.jpg">
+  			 	</div>
+  			 	<div>
+     				<img width="560" height="315" src="images/2v2_Convenience_Store/4.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/2v2_Convenience_Store/5.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/2v2_Convenience_Store/6.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/2v2_Convenience_Store/7.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/2v2_Convenience_Store/8.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/2v2_Convenience_Store/9.jpg">
+  			 	</div>
+  			 	<div>
+     				<img width="560" height="315" src="images/2v2_Convenience_Store/10.jpg">
+   				</div>
+   				<div>
+     				<img width="560" height="315" src="images/2v2_Convenience_Store/11.jpg">
+   				</div>
+			</div>
+		</div>
+		<p>2v2_Convenience_Store was the very first map I ever tried making in cs:go. At the time I knew very little about level design and even just how to do things for source and that certainly shows. A prime example of this is that everything is contained within a large rectangular prism. The reason for this is that when I first opened the editor I made that shape and threw down some spawn points then built up from there. I never knew how to build out from it only in. Despite the limitations of my knowledge I still feel that this map is one of my best. I have had loads of fun on it with my mates and loads of fun makeing it. This map was one of the ones that I put the most thought into aside from the remake when it became a 5v5 map. I tested and remade parts so many times and spent countless hours but loved it; for that sole reason is why I feel this map turned out to be one of my best despite having known practicly nothing and it being my first ever attempt.</p>
+		<span class="projects-startdate">Started: October 28th, 2015</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+		</div>
+	<div class="projects-links">
+		<a href="http://steamcommunity.com/sharedfiles/filedetails/?id=651530132" class="button" target="_blank">Check it out!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+	
+</div>
+
+<div class="webVideo">
+	<br>
+	<div float="projects-text">
+		<h1>Music Video 9: My Heart By Different Heaven & EH!DE</h1>
+		<div class="projects-image">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/xPA8GfRWXh8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		<p>This video is still one of my favorites that I have done. With it, I finally started paying a lot more attention to stuff and not just letting After Effects generate most of the video after I tell it how to. I also used a lot of mechanics I had used in the past and some new ones. As of now, it would not hold up to my standards but still turned out fairly nicely. The music featured was provided by No Copy Right sounds and the song can be found <a href="https://www.youtube.com/watch?v=jK2aIUmmdP4" target="_blank">here!</a></p>
+		<span class="projects-startdate">Uploaded: October 1st, 2015</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+		</div>
+	<div class="projects-links">
+		<a href="https://www.youtube.com/watch?v=auGMScIrQRc&list=PLUAQs3KTZQLnaY7lkDVTjJFYaWzkt-3MG" class="button" target="_blank">Check out the playlist!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+	
+</div>
+
+<!--Not one of my best ones and things are getting cluttered, gonna start only putting ones that are really good but leaving this here in case I decide to add them all so I won't have to re-add this one>
+<div class="webVideo">
+	<br>
+	<div float="projects-text">
+		<h1>Music Video 5: Untitled By Mumpy Seewidge</h1>
+		<div class="projects-image">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/LPkFqoe_nXw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		<p>With this one, I had finally used up all of Veorug's new songs so went onto another friend of mine that made music. I feel that this video was a step in the wrong direction for me, I started relying too much on the generated content in order to keep with my 1 video a week thing. Although this issue was kind of there with a few of the videos it was most apparent in this one. The problem does start to go away as I get more advanced but for a while I did rely too much on that and forcing myself to upload 1 video a week contributed to that. Now that I do these when I feel like it they turn out much better. The music featured was made by my friend Mumpy Seewidge! To be fair I don't even know if he still remebers me but I do remeber him! He never uploaded this song anywhere to my knowledge so I can't link it and I don't think he has a soundcloud either.</p>
+		<span class="projects-startdate">Uploaded: June 11, 2015</span>
+	</div>
+	<div class="projects-links">
+		<a href="https://www.youtube.com/watch?v=auGMScIrQRc&list=PLUAQs3KTZQLnaY7lkDVTjJFYaWzkt-3MG" class="button" target="_blank">Check out the playlist!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+	
+</div>
+<-->
+
+<div class="webVideo">
+	<br>
+	<div float="projects-text">
+		<h1>Music Video 4: Invincible By VeoRug</h1>
+		<div class="projects-image">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/veOqBBKxsfo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		<p>For this video I really mostly just dabbled around with the placement of things to see what looked the best, I didn't really get too fancy with adding anything new as most of the stuff seen here was done in the other videos too. The music featured was made by my friend VeoRug and the song can be found <a href="https://soundcloud.com/veorug/invincible" target="_blank">here</a> or his SoundCloud can be found <a href="https://soundcloud.com/veorug" target="_blank">here!</a></p>
+		<span class="projects-startdate">Uploaded: June 4th, 2015</span>
+		<br>
+		<span class="projects-teamsize">Team size: 2</span>
+		<br>
+		<span class="projects-role">Role: Video (friend made music)</span>
+		</div>
+	<div class="projects-links">
+		<a href="https://www.youtube.com/watch?v=auGMScIrQRc&list=PLUAQs3KTZQLnaY7lkDVTjJFYaWzkt-3MG" class="button" target="_blank">Check out the playlist!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+	
+</div>
+
+<div class="webVideo">
+	<br>
+	<div float="projects-text">
+		<h1>Music Video 3: Blood Moon By VeoRug</h1>
+		<div class="projects-image">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/1WGAtvWrpDY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		<p>Once I had finished the last two videos I did I saw how easily I could get these out and saw all the things I could do since I used some new techniques in this video so I decided that I was going to go for releasing one of these videos a week. I did this for a while but eventually, I caught up with most of my friend's new music and had to change something soon or start using a lot of his older music. Also a side note, I ended up using this song along with a few other ones by VeoRug in the batch script version of the game Not An RPG that I was also working on at the time but it was later cut in favor of a different song of his. The music featured was made by my friend VeoRug and the song can be found <a href="https://soundcloud.com/veorug/blood-moon" target="_blank">here</a> or his SoundCloud can be found <a href="https://soundcloud.com/veorug" target="_blank">here!</a></p>
+		<span class="projects-startdate">Uploaded: May 28th, 2015</span>
+		<br>
+		<span class="projects-teamsize">Team size: 2</span>
+		<br>
+		<span class="projects-role">Role: Video (friend made music)</span>
+		</div>
+	<div class="projects-links">
+		<a href="https://www.youtube.com/watch?v=auGMScIrQRc&list=PLUAQs3KTZQLnaY7lkDVTjJFYaWzkt-3MG" class="button" target="_blank">Check out the playlist!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+	
+</div>
+
+<div class="webVideo">
+	<br>
+	<div float="projects-text">
+		<h1>Music Video 2: Tremor By Veorug</h1>
+		<div class="projects-image">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/x4m9FZI3hsA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		<p>After having made the last music video I immediately started work on another. Since most of the things were all generated by the computer for the whole video and I only had to do a handful of manual things and telling it how to generate I could get these videos done quite quickly and only typically spent around 1 or 2 days at this current time but that changes later on. The music featured was made by my friend VeoRug and the song can be found <a href="https://soundcloud.com/veorug/tremor" target="_blank">here</a> or his SoundCloud can be found <a href="https://soundcloud.com/veorug" target="_blank">here!</a></p>
+		<span class="projects-startdate">Uploaded: May 21st, 2015</span>
+		<br>
+		<span class="projects-teamsize">Team size: 2</span>
+		<br>
+		<span class="projects-role">Role: Video (friend made music)</span>
+		</div>
+	<div class="projects-links">
+		<a href="https://www.youtube.com/watch?v=auGMScIrQRc&list=PLUAQs3KTZQLnaY7lkDVTjJFYaWzkt-3MG" class="button" target="_blank">Check out the playlist!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+	
+</div>
+
+<div class="webVideo">
+	<br>
+	<div float="projects-text">
+		<h1>Music Video 1: Golden Move By VeoRug</h1>
+		<div class="projects-image">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/auGMScIrQRc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		<p>This music video was the first music video I had ever made and was the second thing I had ever made within Adobe After Effects. The music featured was made by my friend VeoRug and the song can be found <a href="https://soundcloud.com/veorug/golden-move" target="_blank">here</a> or his SoundCloud can be found <a href="https://soundcloud.com/veorug" target="_blank">here!</a> I took the idea of making these kinds of videos far and have learned a fair bit since then. Looking at the playlist I created of each one of these you can really see how they improved over time as I learned more and more about the proces of making these and the process of video creation in general. To this day making videos is still a big hobby of mine and this was part of the start of my After Effects journey!</p>
+		<span class="projects-startdate">Uploaded: May 14th, 2015</span>
+		<br>
+		<span class="projects-teamsize">Team size: 2</span>
+		<br>
+		<span class="projects-role">Role: Video (friend made music)</span>
+		</div>
+	<div class="projects-links">
+		<a href="https://www.youtube.com/watch?v=auGMScIrQRc&list=PLUAQs3KTZQLnaY7lkDVTjJFYaWzkt-3MG" class="button" target="_blank">Check out the playlist!</a>
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+	
+</div>
+
+<div class="game">
+	<br>
+	<div float="projects-text">
+		<h1>Not An RPG Clasic</h1>
+		<div class="projects-image">
+			<img src="images/Not An RPG Original.JPG" width="560" height="315"/>
+		</div>
+		<p>Not An RPG was a game I made with mostly .bat and .vbs files. I started work on the game when I was 15 as I had dabbled around a fair bit with batch scripting by making weird different things to do simple tasks. I learned a fair bit about it and decided that I wanted to take on a larger project and thought a game would be perfect! The game's story did not progress very far at this stage but mechanics were actually somewhat in place, you could make a new character, travel to different towns, get materials whilst traveling, and the combat system was even somewhat in place. In some of the pictures you may see that I post you can see a mass amount of post-it notes, almost every single one of those is related to this game and this version in particular. I still don't want to take them down yet as they remind me of how far I have come. The actual date that I started work on this game I am unsure of but I did find <a href="https://stackoverflow.com/questions/29291082/issue-reading-value-from-text-file-and-passing-it-into-if-conditions" target="_blank">this</a> question I posted on Stack Overflow that related to this game so it had to of been before then.</p>
+		<span class="projects-startdate">Started: March 27th, 2015</span>
+		<br>
+		<span class="projects-teamsize">Team size: Solo</span>
+		</div>
+	<br>
+	<br>
+	<div class="projects-links">
+		<span class="button-greyedout">Check it out!</span>
+		<br>
+		<br>
+		(Nothing to check out, it was never uploaded... I still have it though!)
+	</div>
+	<br>
+	<lightdivline></lightdivline>
+</div>
+
+
+
+<div class="projects-links">
+		<a href="#" class="button">Back to top</a>
+</div>
+
+
+
+<br><br>
+<br><br>
+<!--comment>
+<iframe width="640" height="480" src="https://sketchfab.com/models/aabdbd2ffe5e45a1a75c4cd25a00a533/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+<-->
 <div id="foot">
 	<divline></divline>
-	<span>www.DragonHeart.ninja &copy 2018</span>
+	<span>www.DragonHeart.ninja © 2018</span></div>
 </div>
 
 <!--Start of Zendesk Chat Script-->
