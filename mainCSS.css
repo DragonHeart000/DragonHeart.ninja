@@ -1,0 +1,637 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-color: #222;
+	animation-name: colourPulse;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+	font-family: 'Oswald', sans-serif;
+	font-size: x-large;
+	margin:0px;
+	padding:0px;
+	height: 100%;
+	position: relative;
+	color: #ffffff;
+	overflow-x: hidden;
+}
+
+@keyframes colourPulse{
+  	0% {
+    	background-color: #5F0089;
+  	}
+	50% {
+    	background-color: #430060;
+  	}
+  	100% {
+    	background-color: #5F0089;
+  	}
+}
+
+.banner{
+	position: relative;
+	background-image: url("images/banner.jpg");
+    background-repeat: no-repeat;
+	height: 200px;
+	width: 100%;
+ 	z-index: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner-links{
+	position: absolute;
+	top:0;
+	right:0;
+	padding: 5px;
+}
+
+.banner-links img:hover{
+	animation-name: rotateElement;
+	animation-duration: 1s;
+}
+
+.projectsbanner{
+	position: relative;
+	background-image: url("images/projectsbanner.jpg");
+    background-repeat: no-repeat;
+	height: 200px;
+	width: 100%;
+ 	z-index: 0;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.projects-video-background{
+	position: relative;
+	height: 200px;
+	width: 100%;
+ 	z-index: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.socialbanner{
+	position: relative;
+	background-image: url("images/banner2.jpg");
+    background-repeat: no-repeat;
+	height: 200px;
+	width: 100%;
+ 	z-index: 0;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.contactbanner{
+	position: relative;
+	background-image: url("images/contact.jpg");
+    background-repeat: no-repeat;
+	height: 200px;
+	width: 100%;
+ 	z-index: 0;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+}
+
+@keyframes rotateElement{
+	0%{
+		-ms-transform: rotate(0deg); /* IE 9 */
+    	-webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+		transform: rotate(0deg);
+	}
+	50%{
+		-ms-transform: rotate(7deg);
+    	-webkit-transform: rotate(7deg);
+		transform: rotate(7deg);
+	}
+	100%{
+		-ms-transform: rotate(0deg);
+    	-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+}
+
+.navbar{
+	
+	text-align: center;
+	text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000; 
+	color: #FFFFFF;
+	font-size: x-large;
+	position: absolute;
+    bottom: 0;
+}
+
+.navBar ul{
+	padding-top: 10px;
+	text-align: center;
+	list-style: none;
+}
+
+.navbar li{
+	display: inline;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.navbar a:link{
+	color: #FFFFFF;
+	text-decoration: none;	
+}
+
+.navbar a:visited{
+	color: #FFFFFF;
+}
+
+.navbar a:hover{
+	animation-name: navHover;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	color: #FFFFFF;
+}
+
+.navbar a:active{
+	color: #FFFFFF;
+}
+
+@keyframes navHover{
+  	0% {
+    	color: #FFFFFF;
+		text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000; 
+  	}
+	50% {
+    	color: #000000;
+		text-shadow: -1px -1px 0 #444444, 1px -1px 0 #444444, -1px 1px 0 #444444, 1px 1px 0 #444444; 
+  	}
+  	100% {
+    	color: #FFFFFF;
+		text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000; 
+  	}
+}
+
+@font-face{
+	font-family: "HandWriting";
+	src: url("fonts/HandWriting/jellyka_estrya_handwriting-webfont.eot");
+	src: url("fonts/HandWriting/jellyka_estrya_handwriting-webfont.eot?#iefix") format("embedded opentype"),
+         url("fonts/HandWriting/jellyka_estrya_handwriting-webfont.woff2") format("woff2"),
+         url("fonts/HandWriting/jellyka_estrya_handwriting-webfont.woff") format("woff"),
+         url("fonts/HandWriting/jellyka_estrya_handwriting-webfont.ttf") format("truetype"),
+         url("fonts/HandWriting/jellyka_estrya_handwriting-webfont.svg#jellyka_-_estryas_handwritiRg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+::selection {
+    background: #eeff00;
+    color: black;
+}
+::-moz-selection {
+    background: #eeff00;
+	color: black;
+}
+
+@keyframes colourwipe {
+	0%{
+		color: 000;
+	}
+	12%{
+		color: 	#9400D3;
+	}
+	24%{
+		color: #4B0082;
+	}
+	36%{
+		color: #0000FF;
+	}
+	48%{
+		color: #00FF00;
+	}
+	60%{
+		color: #FFFF00;
+	}
+	72%{
+		color: #FF7F00;
+	}
+	84%{
+		color: #FF0000;
+	}
+	100%{
+		color: #FFF;
+	}
+}
+
+#welcome{
+	animation-name: colourwipe;
+	animation-duration: 3s;
+	font-size: 300px;
+	margin-left: 30px;	
+}
+
+handwritten{
+	text-align: left;
+	font-family: "HandWriting";
+	font-size: 150px;
+}
+
+p{
+	text-align: left;
+	text-indent: 50px;
+}
+
+#aboutMe{
+	margin-left: 20%;
+	margin-right: 20%;
+	width: 60%;
+	overflow-wrap: break-word;
+}
+
+#myPicture {
+	float: left;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	padding: 5px;
+	margin-right: 20px;
+}
+
+#myPicture:hover{
+	animation-name: deRoundBorder;
+	animation-duration: 1s;
+	animation-fill-mode:forwards;
+
+}
+
+#myPicture:not(:hover){
+	animation-name: reRoundBorder;
+	animation-duration: 1s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes deRoundBorder{
+	0%{
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+	}
+	100%{
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+	}
+}
+
+@keyframes reRoundBorder{
+	0%{
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+	}
+	100%{
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+	}
+}
+
+.buttonsDiv{
+	text-align: center;	
+}
+
+.button{
+	background-color: #4CAF50;
+    border: none;
+    color: #000;
+    padding: 16px 32px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-greyedout{
+	background-color: #373737;
+    border: none;
+    color: #000;
+    padding: 16px 32px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover{
+	animation-name: buttonColourChange;
+	animation-duration: 500ms;
+	animation-fill-mode:forwards;
+}
+
+.button:not(:hover){
+	animation-name: reButtonColourChange;
+	animation-duration: 500ms;
+	animation-fill-mode:forwards;
+}
+
+@keyframes buttonColourChange{
+	0%{
+		background-color: #4CAF50;
+	}
+	100%{
+		background-color: #347937;
+	}
+}
+@keyframes reButtonColourChange{
+	0%{
+		background-color: #347937;
+	}
+	100%{
+		background-color: #4CAF50;
+	}
+}
+
+divline{
+	display: block;
+    border-top: 10px solid #000000;
+}
+
+lightdivline{
+	display: block;
+    border-top: 2px solid #180025;
+}
+
+#foot{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #222;
+	text-align: center;
+	padding-bottom: 16px;
+}
+
+#foot span{
+	font-family: 'Oswald', sans-serif;
+	font-size: small;
+}
+
+#foot divline{
+	top: 0;
+	right: 0;
+	left: 0;
+	padding: 0px;
+}
+
+#sidebar{
+	margin-top: 200px;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	position: fixed;
+}
+
+.sidebarshown{
+	animation-name: showsidebar;
+	animation-duration: 1s;
+	animation-fill-mode:forwards;
+}
+
+.sidebarhidden{
+	animation-name: hidesidebar;
+	animation-duration: 1s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes hidesidebar{
+	0%{
+		background-color: #222;
+		width: 200px
+	}
+	100%{
+		background-color: #111;
+		width: 20px
+	}
+}
+
+@keyframes showsidebar{
+	0%{
+		background-color: #111;
+		width: 20px
+	}
+	100%{
+		background-color: #222;
+		width: 200px
+	}
+}
+
+.wrapperforwhensidebarisused{
+	animation-name: wrapperforshownsidebar;
+	animation-duration: 1s;
+	animation-fill-mode:forwards;
+	overflow: auto;
+}
+
+.wrapperforwhensidebarisusedbutnotactive{
+	animation-name: wrapperforhiddensidebar;
+	animation-duration: 1s;
+	animation-fill-mode:forwards;
+	overflow: auto;
+}
+
+@keyframes wrapperforshownsidebar{
+	0%{
+		margin-left: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	100%{
+		margin-left: 200px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+@keyframes wrapperforhiddensidebar{
+	0%{
+		margin-left: 200px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	100%{
+		margin-left: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+arrow.right{
+	border: solid #FFF;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	animation-name: arrowturnright;
+	animation-duration: 1s;
+	animation-fill-mode:forwards;
+}
+
+arrow.left{
+	border: solid #FFF;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	animation-name: arrowturnleft;
+	animation-duration: 1s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes arrowturnleft{
+	0%{
+    	-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+	100%{
+		-webkit-transform: rotate(135deg);
+		transform: rotate(135deg);
+	}
+}
+
+@keyframes arrowturnright{
+	0%{
+    	-webkit-transform: rotate(135deg);
+		transform: rotate(135deg);
+	}
+	100%{
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+}
+
+
+#showhidenav{
+	background-color: rgba(0,0,0,0);
+	passing: 5px;
+    border: none;
+    color: #fff;
+    float: right;
+}
+
+@keyframes fadein{
+	0%{
+		opacity: 0%;
+		filter: Alpha(opacity=0);
+		color: rgba(255,255,255,0);
+	}
+	100%{
+		opacity: 100%;
+		filter: Alpha(opacity=100);
+		color: rgba(255,255,255,1.00);
+	}
+}
+
+@keyframes fadeout{
+	0%{
+		opacity: 100%;
+		filter: Alpha(opacity=100);
+		color: rgba(255,255,255,0);
+	}
+	100%{
+		opacity: 0%;
+		filter: Alpha(opacity=0);
+		color: rgba(255,255,255,0);
+	}
+}
+
+.sidebaritem{
+	color: rgba(255,255,255,0);
+	animation-name: fadein;
+	animation-delay: 1s;
+	animation-duration: 1s;
+	animation-fill-mode:forwards;
+}
+
+.sidebaritem-hide{
+	color: rgba(255,255,255,100);
+	animation-name: fadeout;
+	animation-delay: 0.25s;
+	animation-fill-mode:forwards;
+}
+.sidebar-list{
+	list-style: none;
+	/*May change later */
+}
+
+.sidebar-list input[type=checkbox]{
+	display: none;
+}
+
+.projocet-wrapper{
+	
+}
+
+.projects-image{
+	float: right;
+}
+
+.projects-text{
+	
+}
+
+.projects-links{
+	position: relative;
+	margin-top: 10%;
+	bottom: 0;
+	text-align: center;
+}
+
+.slideshow {
+	position: relative;
+  	width: 560px;
+  	height: 315px;
+  	padding: 10px;
+  	box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.slideshow > div {
+	position: absolute;
+  	top: 10px;
+  	left: 10px;
+  	right: 10px;
+  	bottom: 10px;
+}
+
+.socialbox{
+	display: inline-block;
+	margin: 10px;
+	width: 200px;
+    height: 200px;
+	background: rgba(0, 0, 20, 0.4);
+	box-shadow: 0 0 20px rgba(0, 0, 20, 0.4);
+}
+
+.socialbox img{
+	margin-top: 40%;
+	vertical-align: middle;
+}
+
+.socialwrapper{
+	overflow: hidden;
+	display: inline;
+	text-align: center;
+}
+
+.socialwrapper a{
+	text-decoration: none;
+	color: inherit;
+}
+
+.socialwrapper a:visited{
+	text-decoration: none;
+	color: inherit;
+}
+
+.socialwrapper a:hover{
+	text-decoration: none;
+	color: inherit;
+}
+
+.contact-info{
+	text-align: center;
+}
+
+#dhlogo{
+	padding-left: 200px;
+	padding-right: 200px;
+}
