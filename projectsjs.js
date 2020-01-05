@@ -166,7 +166,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	//showhidesidebar();
 	//Sets the sidebar to hidden if on mobile but does not disable sidebar.
 	
-	alert("This site is not yet optimized for mobile phones so do expect bugs. I will add support once the full content is done as I plan to make a whole new style for mobile.");
+	alert("optimization for mobile is experimental.");
 }
 	
 $(".showonly").on('change', function() {
